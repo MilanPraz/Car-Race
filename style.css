@@ -1,0 +1,343 @@
+body{
+    margin: 0;
+    padding: 0;
+   height: 100vh;
+   width: 100vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#main-container{
+    position:relative;
+    height: 99vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bgimg{
+    height:99vh;
+    width: 100vw;
+}
+#bg{
+    height: 99vh;
+    width: 100vw;
+}
+
+#myroad{
+    width:45vw;
+    height:99vh;
+    
+}
+#road{
+    position: absolute;
+    top:0%;
+    z-index: 2;
+    left:50%;
+    transform: translate(-50%,0%);
+}
+
+/* @keyframes roadanimation{
+    0%{
+        height:-20vh;
+    }
+    100%{
+        height:100vh;
+    }
+} */
+
+@keyframes roadanimation {
+    0% {
+        top: -100%;
+
+    }
+
+    100% {
+        top: 100%;
+    }
+} 
+
+.ecar1{
+    width:50px;
+    
+}
+.ecar2{
+    width:50px;
+    
+}
+.ecar3{
+    width:50px;
+    
+}
+.ecar4{
+    width:50px;
+    
+}
+.enemycar1{
+    position: absolute;
+    left:28%;
+    z-index: 4;
+    /* animation: car1 infinite linear 3s; */
+
+}
+.enemycar2{
+    position: absolute;
+    left:38%;
+    z-index: 4;
+    /* animation: car2 infinite linear 2s; */
+
+
+}
+.enemycar3{
+    position: absolute;
+    left:54%;
+    z-index: 4;
+    /* animation: car3 infinite linear 5s; */
+
+
+}
+.enemycar4{
+    position: absolute;
+    left:65%;
+    z-index: 4;
+    /* animation: car4 infinite linear 4s; */
+
+    
+
+}
+
+@keyframes car1{
+    0%{
+        top:-20vh;
+    }
+    100%{
+        top:80vh;
+    }
+
+}
+
+
+@keyframes car2{
+    0%{
+        top:-20vh;
+    }
+    100%{
+        top:80vh;
+    }
+
+}
+
+@keyframes car3{
+    0%{
+        top:-20vh;
+    }
+    100%{
+        top:80vh;
+    }
+
+}
+
+@keyframes car4{
+    0%{
+        top:-20vh;
+    }
+    100%{
+        top:80vh;
+    }
+
+}
+#playercar{
+    width:50px;
+    
+}
+.mycar{
+    position: absolute;
+    left:50%;
+    z-index: 4;
+
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:5%;
+}
+
+
+
+
+.scorecontainer{
+    position: absolute;
+    top:5%;
+    left:1%;
+}
+
+.startbtn{
+    position: absolute;
+    bottom:50%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.btnforstart{
+    background-color:rgb(0 127 255);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.9);
+    font-size: 30px;
+    color: #b8b8b6;
+    cursor: pointer;
+}
+.score{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #b8b8b6;
+    text-shadow: 2px 2px 10px rgb(0,0,0,0.8);
+
+}
+
+.highscore{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #b8b8b6;
+    text-shadow: 2px 2px 10px rgb(0,0,0,0.8);
+
+}
+.gameover{
+    font-size: 50px;
+    color:#b8b8b6;
+    z-index: 6;
+    position: absolute;
+    bottom:50%;
+    left:0%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: bold;
+    background-color: rgba(103, 196, 59, 0.8);
+    width:100%;
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+    visibility: hidden;
+    
+    
+}
+.gameover p{
+    padding-top: 70px;
+
+}
+
+.controls{
+    transform: scale(0.7);
+    display: grid;
+    position: absolute;
+    top: 83%;
+    left: 23%;
+    z-index: 7;
+    visibility: hidden;
+  }
+  .buttons {
+	width: 210px;
+	height: 140px;
+	background: transparent;
+	align-self: center;
+	justify-self: center;
+	display: grid;
+	grid-template-rows: 70px 70px;
+	grid-template-columns: 70px 70px 70px;
+}
+.btn {
+    background-color: rgb(255,93,0,0.5);;
+	width: 60px;
+	height: 60px;
+	border: 2px #fff solid;
+	border-bottom: 2px #fff solid;
+	align-self: center;
+	justify-self: center;
+	cursor: pointer;
+	border-radius: 8px;
+	display: grid;
+	/*box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);*/
+}
+
+.chevron {
+	height: 30px;
+	width: 20px;
+	align-self: center;
+	justify-self: center;
+	
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	color:#fff;
+    
+}
+#bu {
+	grid-column-start: 2;
+}
+#bd {
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+#bl {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+#br {
+	grid-column-start: 3;
+	grid-row-start: 2;
+}
+
+
+
+
+
+@media(max-width:420px){
+    .score{
+        font-size: 9px;
+    }
+    .highscore{
+        font-size: 10px;
+    }
+    #myroad{
+        width:60vw;
+    }
+    .enemycar1{
+        left:22%;
+    }
+    .enemycar2{
+        left:36%;
+    }
+    .enemycar3{
+        left:52%;
+    }
+    .enemycar4{
+        left:67%;
+    }
+    #playercar{
+        width:37px;
+    }
+    .ecar1{
+        width:37px;
+        
+    }
+    .ecar2{
+        width:37px;
+        
+    }
+    .ecar3{
+        width:37px;
+        
+    }
+    .ecar4{
+        width:37px;
+        
+    }
+    .controls{
+        visibility: visible;
+    }
+}
+
